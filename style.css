@@ -1,0 +1,53 @@
+.grid-container {
+    
+    display: grid;
+    grid-template-areas:
+    'instagram bandlab'
+    'tiktok soundcloud';
+    max-width: 51%;
+    max-height: 51%;
+
+}
+.item1 { grid-area: instagram; }
+.item2 { grid-area: bandlab; }
+.item3 { grid-area: tiktok; }
+.item4 { grid-area: soundcloud; }
+
+.h1-main {
+    color: white;
+    text-align: left;
+    position: absolute;
+    padding-left: 10px;
+}
+
+.about-btn {
+    color: white;
+    text-align: right;
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    bottom: 10px;
+}
+.about-btn img {
+    width: 10%;
+    aspect-ratio: 1 1;
+    opacity: 20%;
+}
+
+#holder {
+    overflow: hidden;
+}
+  
+#holder img {
+    z-index: 2;
+    width: 100%;
+     -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+  
+#holder img:hover {
+    background-color: black;
+    transform: scale(1.5,1.5);
+    filter: brightness(50%);
+}
