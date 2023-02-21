@@ -1,5 +1,4 @@
 .grid-container {
-    
     display: grid;
     grid-template-areas:
     'instagram bandlab'
@@ -12,12 +11,99 @@
 .item2 { grid-area: bandlab; }
 .item3 { grid-area: tiktok; }
 .item4 { grid-area: soundcloud; }
+.item5 { grid-area: youtube; }
+
+@media only screen and (min-width: 1700px) {
+    .grid-container {
+        max-width: 48%;
+        max-height: 48%;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1700px) {
+    .grid-container {
+        min-width: 48%;
+        min-height: 48%;
+    
+    }
+    .h1-main {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+    .grid-container {
+        min-width: 55%;
+        min-height: 55%;
+    
+    }
+
+    .h1-main {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+    .grid-container {
+        grid-template-areas:
+        'instagram bandlab'
+        'tiktok soundcloud';
+        min-width: 51%;
+        min-height: 51%;
+    
+    }
+
+    .h1-main {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+        'instagram'
+        'bandlab'
+        'tiktok'
+        'soundcloud';
+        min-width: 51%;
+        min-height: 51%;
+    
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+    .grid-container {
+        min-width: 60%;
+        min-height: 60%;
+    }
+
+    .about-btn img {
+        width: 100%;
+        opacity: 20%;
+    }
+
+    .h1-main {
+        font-size: 75px;
+    }
+}
+
+@media only screen and (max-width: 399px) and (min-width: 235px) {
+    .h1-main {
+        font-size: 200px;
+    }
+
+    .grid-container {
+        max-width: 80%;
+    }
+}
 
 .h1-main {
     color: white;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
     position: absolute;
     padding-left: 10px;
+    font-size: 30px;
 }
 
 .about-btn {
@@ -29,8 +115,7 @@
     bottom: 10px;
 }
 .about-btn img {
-    width: 10%;
-    aspect-ratio: 1 1;
+    width: 50px;
     opacity: 20%;
 }
 
@@ -49,5 +134,5 @@
 #holder img:hover {
     background-color: black;
     transform: scale(1.5,1.5);
-    filter: brightness(50%);
+    filter: brightness(30%);
 }
